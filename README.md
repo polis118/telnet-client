@@ -18,8 +18,7 @@ Implementujte telnet klienta, který vytvoří soket pro komunikaci s jiným tel
 
 ### Požadavky:
 * Program bude přijímat __IP adresu a port__ jako parametry při spouštění aplikace.
-* Zamezte blokování při operaci InputStream.read() pomocí volání InputStream.available().
-Snižte zátěž CPU ve smyčce aktivního čekání pomocí volání Thread.sleep(20).
+* Zamezte blokování při operaci InputStream.read() pomocí volání InputStream.available().Snižte zátěž CPU ve smyčce aktivního čekání pomocí volání Thread.sleep(20).
 * Implementujte příjem a odesílání znaků ze Soketu v __nezávislých__ vláknech.
 * Zpráva bude odeslána ve chvíli, kdy uživatel zmáčkne na klávesnici __ENTER__
 * Pokud uživatel napíše __"/QUIT"__ a zmáčkne ENTER, aplikace ukončí spojení a ukončí se.

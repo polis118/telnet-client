@@ -5,7 +5,10 @@ public class App {
     public static void main(String[] args) {
         // TODO: Implement input parameter processing
 
-        TelnetClient telnetClient = new TelnetClient("127.0.0.1", 23);
+        String serverIp = args[0];
+        int port = Integer.parseInt(args[1]);
+
+        TelnetClient telnetClient = new TelnetClient(serverIp, port);
         telnetClient.run(); // run telnet client
     }
 }
