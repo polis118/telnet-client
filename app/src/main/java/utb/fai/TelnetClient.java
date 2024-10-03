@@ -23,13 +23,13 @@ public class TelnetClient {
                 Thread readerThread = new Thread(() -> {
                     try (BufferedReader stdIn = new BufferedReader(new InputStreamReader(System.in))) {
                         String userInput;
-                        while (userInput = stdIn.readLine()) != null) {
+                        while ((userInput = stdIn.readLine()) != null) {
                             if ("/QUIT".equalsIgnoreCase(userInput)) {
                                 break;
                             }
                             out.println(userInput);
                         }
-                    } catch (IOException | InterruptedException e) {
+                    } catch (IOException e) {
                         e.printStackTrace();
                     }
                 });
